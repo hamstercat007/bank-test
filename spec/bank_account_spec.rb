@@ -16,4 +16,12 @@ describe BankAccount do
     end
   end
 
+  describe '.withdrawal' do
+    it 'will withdraw the amount from the bank account' do
+      bankaccount = BankAccount.new
+      bankaccount.deposit(deposit: 5000)
+      bankaccount.withdrawal(withdrawn: 500)
+      expect(bankaccount.balance).to eq 4500
+    end
+  end
 end
